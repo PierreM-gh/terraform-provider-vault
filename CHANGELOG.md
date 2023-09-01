@@ -1,5 +1,8 @@
 ## Unreleased
 
+FEATURES:
+* Adds support to `vault_gcp_auth_backend` for common backend tune parameters ([#1997](https://github.com/terraform-providers/terraform-provider-vault/pull/1997)).
+
 ## 3.23.0 (Nov 15, 2023)
 
 FEATURES:
