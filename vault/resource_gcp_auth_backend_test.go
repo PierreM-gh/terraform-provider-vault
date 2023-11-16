@@ -53,7 +53,7 @@ func TestGCPAuthBackend_basic(t *testing.T) {
 				Check: resource.ComposeAggregateTestCheckFunc(
 					testutil.TestAccCheckAuthMountExists(resourceName,
 						&resAuthFirst,
-						testProvider.Meta().(*provider.ProviderMeta).GetClient()),
+						testProvider.Meta().(*provider.ProviderMeta).MustGetClient()),
 					testGCPAuthBackendCheck_attrs(resourceName),
 					resource.TestCheckResourceAttr(resourceName,
 						"custom_endpoint.#", "1"),
@@ -90,7 +90,7 @@ func TestGCPAuthBackend_basic(t *testing.T) {
 				Check: resource.ComposeAggregateTestCheckFunc(
 					testutil.TestAccCheckAuthMountExists(resourceName,
 						&resAuthFirst,
-						testProvider.Meta().(*provider.ProviderMeta).GetClient()),
+						testProvider.Meta().(*provider.ProviderMeta).MustGetClient()),
 					testGCPAuthBackendCheck_attrs(resourceName),
 					resource.TestCheckResourceAttr(resourceName,
 						"custom_endpoint.#", "1"),
